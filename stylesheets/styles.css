@@ -227,7 +227,7 @@ footer {
     padding:0;
   }
 
-  header ul, header p.view p.view2 {
+  header ul, header p.view p.view2 p.view3 {
     position:static;
   }
 
@@ -296,11 +296,11 @@ and (max-device-width : 480px){
 }
 
 
-p.view {
+p.view3 {
     display: inline;
 }
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px){ 
-    p.view {display: none;}
+    p.view3 {display: none;}
 }
