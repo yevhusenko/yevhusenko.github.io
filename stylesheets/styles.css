@@ -267,13 +267,13 @@ pre {
 
 /* ******* */
 .footer {
+    display: inline;
     position:absolute;
     bottom:0;
     width:100%;
     padding: 10px; /* Some padding */
     text-align: center; /* Center text*/
     background: white;
-    display: block;
 }
 
 /* Smartphone Portrait and Landscape */
