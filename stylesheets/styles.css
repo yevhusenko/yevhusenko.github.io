@@ -295,7 +295,10 @@ and (max-device-width : 480px){
     p.view2 {display: inline;}
 }
 
-/* Smartphone Portrait and Landscape */
+
+p.view {
+    display: inline;
+}
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px){ 
