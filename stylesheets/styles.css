@@ -273,8 +273,8 @@ pre {
     padding: 10px; /* Some padding */
     text-align: center; /* Center text*/
     background: white;
+    display: block;
 }
-
 
 /* Smartphone Portrait and Landscape */
 @media only screen
