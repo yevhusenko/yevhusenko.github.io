@@ -227,7 +227,7 @@ footer {
     padding:0;
   }
 
-  header ul, header p.view {
+  header ul, header p.view p.view2 {
     position:static;
   }
 
@@ -273,4 +273,16 @@ pre {
     padding: 10px; /* Some padding */
     text-align: center; /* Center text*/
     background: white;
+}
+
+
+p.view2 {
+    display: none;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ 
+    p.view2 {display: inline;}
 }
