@@ -1,11 +1,24 @@
 /* @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700); */
 
+/* Increased base font-size from 14px -> 16px for better readability */
 body {
   padding:50px;
-  font:14px/1.5 Arial, Helvetica, sans-serif;
+  /* base font size and line-height adjusted */
+  font:16px/1.6 Arial, Helvetica, sans-serif;
   color:rgb(75, 74, 74);
   font-weight:300;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color:#222;
+  margin:0 0 20px;
+}
+
+/* make sizing easier to reason about for responsive layout */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
@@ -46,8 +59,14 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  max-width:860px;
+  width:100%;
   margin:0 auto;
+  padding:0 15px; /* provide breathing room on small screens */
+  display: grid;
+  grid-template-columns: 270px 1fr; /* sidebar + main content */
+  gap: 24px;
+  align-items: start;
 }
 
 blockquote {
@@ -93,12 +112,25 @@ th {
 
 img {
   max-width:100%;
+  height:auto;
 }
 
 header {
-  width:270px;
-  float:left;
-  position:fixed;
+  width:100%;
+  position:relative; /* keep it in flow so content reflows on resize */
+  grid-column: 1 / 2;
+}
+
+/* Support sidebar/main semantic layout (aside + main) */
+aside, .sidebar {
+  width:100%;
+  position:relative;
+  grid-column: 1 / 2;
+}
+
+main {
+  width:100%;
+  grid-column: 2 / 3;
 }
 
 header ul {
@@ -160,9 +192,9 @@ header ul a strong {
 }
 
 section {
-  width:500px;
-  float:right;
+  width:100%;
   padding-bottom:50px;
+  grid-column: 2 / 3;
 }
 
 small {
@@ -179,8 +211,8 @@ hr {
 footer {
   width:270px;
   float:left;
-  position:fixed;
-  bottom:50px;
+  position:relative; /* avoid overlap on smaller viewports */
+  margin-bottom:50px;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -190,6 +222,11 @@ footer {
     margin:0;
   }
 
+  /* Collapse grid into single column on medium and small screens */
+  div.wrapper {
+    display:block;
+  }
+
   header, section, footer {
     float:none;
     position:static;
@@ -197,7 +234,7 @@ footer {
   }
 
   header {
-    padding-right:320px;
+    padding-right:0; /* allow header content to flow naturally on medium screens */
   }
 
   section {
@@ -212,9 +249,13 @@ footer {
   }
 
   header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
+    position:static;
+  }
+
+  /* On the research page hide the avatar when the layout collapses so
+     the main content doesn't get pushed below the avatar */
+  body.research .avatar-wrap {
+    display: none;
   }
 }
 

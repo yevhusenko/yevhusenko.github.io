@@ -1,24 +1,55 @@
-.navbar {
-    width:860px;
-    margin:0 auto;
-    overflow: hidden;
-    background-color: white;
-  }
 
+.navbar {
+  width:100%;
+  max-width:860px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start; /* keep items in DOM order */
+  gap:12px;
+  padding:10px 15px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.navbar h1 {
+  margin:0;
+  font-size:1.6rem; /* increased title size per request */
+  margin-right: auto; /* push the nav links to the right while preserving their DOM order */
+}
+
+/* Slightly reduce the title size on very small screens to avoid wrapping */
+@media only screen and (max-width: 420px) {
   .navbar h1 {
-      float: left;
-      display: block;
+    font-size:1.25rem;
   }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    float: right; /* Make sure that the links stay side-by-side */
-    display: block;
-    color: #39c;
-    text-align: center;
-    padding: 14px 20px; /* Add some padding */
-    text-decoration: none;
-  }
+}
+
+/* Navigation links container to allow toggling on mobile */
+.nav-links {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.nav-links a {
+  display:inline-block;
+  color: #39c;
+  text-align: center;
+  padding: 8px 12px; /* smaller padding for better wrapping */
+  text-decoration: none;
+}
+
+/* Hamburger button (hidden on wide screens) */
+.hamburger {
+  display:none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 6px 8px;
+  cursor: pointer;
+}
   
 
   /* Change color on hover/mouse-over */
@@ -28,9 +59,30 @@
   }
 
 
-/* Smartphone Portrait and Landscape */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px){
-    .navbar { display: none;}
+/* On narrow screens stack navbar items */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .hamburger {
+    display:block;
+    margin-left: 0;
+  }
+
+  /* hide links by default on mobile; show when .open is present */
+  .nav-links {
+    display:none;
+    flex-direction:column;
+    width:100%;
+  }
+
+  .nav-links.open {
+    display:flex;
+  }
+
+  .nav-links a {
+    width:100%;
+    padding:8px 0;
+  }
 }

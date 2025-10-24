@@ -45,10 +45,11 @@ content: "[\2212]";
 div.panel {
 padding: 0 20px;
 margin-top: 5px;
-display: block;
-background-color: white;
+	display: none; /* start hidden by default; JS will toggle .show */
+	background-color: #f7f5f5; /* light gray background for abstracts */
+	border-radius: 4px;
 font-size: 100%;
 }
-/* div.panel.show {
-display: block !important;
-} */
+div.panel.show {
+	display: block !important;
+}

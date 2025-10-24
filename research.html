@@ -1,68 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>Yevhenii Usenko</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Yevhenii Usenko — Research</title>
 
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="stylesheet" href="stylesheets/navbar_style.css">
-        <link rel="stylesheet" href="stylesheets/research_style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/navbar_style.css">
+    <link rel="stylesheet" href="stylesheets/research_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    </head>
+  </head>
 
+  <body class="research">
+    <div class="navbar">
+      <h1>Yevhenii Usenko</h1>
+      <button class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="CV_Usenko.pdf">CV</a>
+      </nav>
+    </div>
 
-    <body>
-        <div class="navbar">
-            <h1>Yevhenii Usenko</h1>
-            <a href="CV_Usenko.pdf">CV</a>
-            <a href="research.html">Research</a>
-            <a href="index.html">Home</a>
-          </div>
-          
-        <div class="wrapper">
-          <header>
-            <h1><p class="view2">Yevhenii Usenko</p></h1>
-            <p>Finance PhD candidate at MIT </p>
-            <p>Email: <a href = "mailto: yusenko@mit.edu"> yusenko@mit.edu</a> </p>
-            <h3><p class="view2"><a href="index.html">Home</a></p></h3>
-            <h3><p class="view2"><a href="research.html">Research</a></p></h3>
-            <!-- <h3><p class="view"><a href="">Blog</a></p></h3> -->
-            <h3><p class="view2"><a href="CV_Usenko.pdf">CV</a></p></h3>
-            <p class="view3"><img src="avatar.JPG" width=270></p>
-          </header>
-          <section>
-            <h3><a id="research" class="anchor" href="#research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working papers:</h3>
-            <p style="margin:0;" }><p> <a style="margin:0; font-size:110%; font-weight:bold" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3762043"> Permanent Capital Losses after Banking Crises </a>
-                <br> with Matthew Baron, Luc Laeven, and Julien Penasse </p>
-                <p>
-                <!-- <button class="accordion">
-                  Abstract
-                </button> -->
-                <!-- </p> -->
-                <div class="panel" style="background-color: #f7f5f5; color: #111; padding: 10px;">
-                  We study the persistence of bank distress and the effectiveness of policy interventions in restoring bank capitalization across banking crises in 46 economies since 1870. We find that bank stocks experience large, permanent declines at the onset of crises. These losses predict commensurate long-term declines in banks’ cash flows and book values and low future equity returns. Bank losses in crises are primarily due to asset quality deterioration, not early liquidation during panics. Forceful liquidity-based interventions predict only small, temporary increases in bank market value. Our findings indicate that banking crises stem primarily from fundamental losses rather than temporary illiquidity or discount rate rises. Government recapitalizations have historically been small and delayed, leading to persistent bank undercapitalization. Overall, policy interventions have generally been insufficient in restoring bank value after crises.</div></p>
-          </section>
-          <section>
-            <h3><a id="research" class="anchor" href="#research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work in progress:</h3>
-            <p style="margin:0;" }><p> <a style="margin:0; font-size:110%; font-weight:bold"> Deposit Market Concentration and Interest Rate Passthrough in the U.S.: 1960-2024 </a></p>
-            <p style="margin:0;" }><p> <a style="margin:0; font-size:110%; font-weight:bold"> Inflation, Taxation, and Corporate Investment in the U.S. during the Great Inflation </a></p>
-          </section>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <br>
+        <p>Finance PhD candidate at MIT</p>
+        <p>Email: <a href="mailto:yusenko@mit.edu">yusenko@mit.edu</a></p>
+
+        <div class="avatar-wrap">
+          <img src="avatar.JPG" alt="avatar" style="width:100%;max-width:270px;display:block;margin-top:10px">
         </div>
+      </aside>
 
-        <script src="javascripts/scale.fix.js"></script>
-        <!-- <script> 
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-        
-            for (i = 0; i < acc.length; i++) {
-                acc[i].onclick = function(){
-                    this.classList.toggle("active");
-                    this.parentNode.nextElementSibling.classList.toggle("show");
-              }
-            }
-            </script> -->
-      </body>
-    </html>
+      <main>
+        <section>
+          <br>
+          <h2>Job Market Paper</h2>
+          <p style="margin:0"><a style="font-size:110%; font-weight:bold" href="jmp_Usenko.pdf">Large depositors, retail depositors, and the deposits channel of monetary policy</a></p>
+          <button class="accordion" aria-expanded="false">Abstract</button>
+          <div class="panel">
+            <p></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Publications</h2>
+          <p style="margin:0"><a style="font-size:110%; font-weight:bold" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3762043">Permanent Capital Losses after Banking Crises</a><br>
+          with Matthew Baron, Luc Laeven, and Julien Penasse<br>
+          <strong>The Quarterly Journal of Economics</strong>, forthcoming</p>
+          <button class="accordion" aria-expanded="false">Abstract</button>
+          <div class="panel">
+            <p>
+              We study the mechanisms driving bank losses across historical banking crises in 46 economies and the effectiveness of policy interventions in restoring bank capitalization. We find that bank stocks experience large, permanent declines at the onset of crises. These losses predict commensurate long-term declines in banks' earnings and dividends, rather than elevated future equity returns. Bank losses are primarily driven by write-downs of nonperforming assets, not asset sales during panics. Forceful liquidity-based interventions during crises predict only small, temporary increases in bank market value. Overall, these results suggest that bank losses during crises are not primarily due to temporary price dislocations. Early liquidity interventions can avert banking crises, but only under specific conditions. Once large bank equity declines have occurred, policy responses have historically failed to prevent persistent undercapitalization in the banking sector.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Working Papers</h2>
+          <p style="margin:0"><a style="font-size:110%; font-weight:bold">Inflation, Taxation, and Corporate Investment in the U.S. during the Great Inflation</a></p>
+          <button class="accordion" aria-expanded="false">Abstract</button>
+          <div class="panel">
+            <p>
+              U.S. corporate taxation is not neutral to inflation. Two of its features—historical cost depreciation and FIFO inventory accounting—have been hypothesized to lower real after-tax corporate cash flows and, thereby, make investment less attractive when expected inflation is elevated. Using Compustat data for 1965-1980 and a difference-in-differences research design, I do not find evidence in support of this hypothesis. I discuss possible explanations for this null result. I find a robust effect of statutory tax changes on corporate investment during the Great Inflation. The effect is economically meaningful and consistent with the prior literature: a tax reform that increases firm's cost of capital by 10% lowers investment of affected firms by 2 percentage points of total assets relative to firms not affected by the reform.
+            </p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="javascripts/scale.fix.js"></script>
+    <script>
+      // Accordion behavior: toggle the panel immediately following the button
+      (function(){
+        var acc = document.getElementsByClassName('accordion');
+        for (var i = 0; i < acc.length; i++) {
+          acc[i].addEventListener('click', function(){
+            var isOpen = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!isOpen));
+            var panel = this.nextElementSibling;
+            if (!panel) return;
+            panel.classList.toggle('show');
+          });
+        }
+      })();
+    </script>
+    <script src="javascripts/hamburger.js"></script>
+  </body>
+</html>
     
