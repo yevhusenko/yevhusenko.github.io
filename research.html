@@ -81,6 +81,8 @@
           acc[i].addEventListener('click', function(){
             var isOpen = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', String(!isOpen));
+            // toggle the visual active class so CSS can switch + to −
+            this.classList.toggle('active');
             var panel = this.nextElementSibling;
             if (!panel) return;
             panel.classList.toggle('show');
