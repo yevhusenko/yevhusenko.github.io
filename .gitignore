@@ -1,0 +1,3 @@
+# Ignore local helper scripts
+jmp_copy.sh
+cv_copy.sh
