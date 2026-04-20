@@ -1,3 +1,6 @@
 # Ignore local helper scripts
 jmp_copy.sh
 cv_copy.sh
+
+# Claude Code project instructions (local only)
+CLAUDE.md
