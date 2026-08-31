@@ -51,6 +51,46 @@ a {
   text-decoration:none;
 }
 
+.contact-block {
+  margin-top:32px;
+}
+
+.contact-title {
+  margin:0 0 10px;
+  font-size:16px;
+}
+
+.profile-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 20px;
+}
+
+a.profile-link {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 11px;
+  font-size:14px;
+  color:#267aa3;
+  background:#eaf4f9;
+  border:1px solid #b8dceb;
+  border-radius:5px;
+  line-height:1.2;
+  transition:background-color 0.15s ease, border-color 0.15s ease;
+}
+
+a.profile-link:hover {
+  background:#d9edf6;
+  border-color:#8cc7e3;
+}
+
+a.profile-link:focus-visible {
+  outline:2px solid #39c;
+  outline-offset:2px;
+}
+
 a small {
   font-size:11px;
   color:#777;

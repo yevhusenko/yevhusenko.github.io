@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yevheniiusenko.me/sitemap.xml
+Sitemap: https://www.yevheniiusenko.me/sitemap.xml
