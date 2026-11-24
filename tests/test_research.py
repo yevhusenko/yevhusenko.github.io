@@ -82,8 +82,8 @@ class ResearchPageTests(unittest.TestCase):
         self.assertEqual(self.parser.links[PAPER_TITLE], PAPER_FILENAME)
         self.assertTrue((ROOT / PAPER_FILENAME).is_file())
         self.assertFalse((ROOT / "jmp_Usenko.pdf").exists())
-        self.assertIn("(August 2026)", self.visible_text)
-        self.assertNotIn("Updated August 2026", self.visible_text)
+        self.assertIn("(November 2026)", self.visible_text)
+        self.assertNotIn("Updated November 2026", self.visible_text)
 
     def test_previous_working_paper_is_commented_out(self):
         self.assertNotIn(HIDDEN_PAPER_TITLE, self.visible_text)
